@@ -225,7 +225,7 @@ const Meals = () => {
             <>
               <h3>
                 Your location is <span>{userDistanceKilo} Kilometers </span>
-                that is far from our partner!
+                which is out of reach from our partner!
               </h3>
               <p>So, You can only get Frozen meals</p>
             </>
@@ -239,10 +239,12 @@ const Meals = () => {
             </>
           )}
           <section className="meal hotmeal-con">
-            <h3 className="text-orange">Available meals for today</h3>
-            {/* <h3>Hot Meals</h3> */}
-            <div className="meals-con flex">{databaseMeal}</div>
-          </section>
+  <h3 className="text-orange">Meals Available Today</h3>
+  <div className="meals-con flex">
+    {userDistanceKilo > 10 ? FrozenMeals : databaseMeal}
+  </div>
+</section>
+
         </div>
       )}
     </>

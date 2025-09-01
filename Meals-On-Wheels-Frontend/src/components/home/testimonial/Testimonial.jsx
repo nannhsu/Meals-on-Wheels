@@ -10,8 +10,8 @@ const Testimonial = () => {
       </div>
       <div className="cards-con">
         <div className="card">
-          <img src={BillGate} alt="Bill Gate" />
-          <h3>Bill Gates</h3>
+          <img src={BillGate} alt="Elon Musk" />
+          <h3>Elon Musk</h3>
           <p>
             Contributing to MerryMeal has been a heartwarming experience.
             Knowing that my donation helps deliver hot meals to those in need
@@ -20,8 +20,8 @@ const Testimonial = () => {
           </p>
         </div>
         <div className="card">
-          <img src={Jeff} alt="Bill Gate" />
-          <h3>Jeff Bezos</h3>
+          <img src={Jeff} alt="Steve Job" />
+          <h3>Steve Job</h3>
           <p>
             MerryMeal's dedication to providing nutritious meals to vulnerable
             individuals is truly commendable. I'm proud to support such a worthy
@@ -29,8 +29,8 @@ const Testimonial = () => {
           </p>
         </div>
         <div className="card">
-          <img src={Warren} alt="Bill Gate" />
-          <h3>Warren Buffett</h3>
+          <img src={Warren} alt="Mr.Thomas" />
+          <h3>Mr.Thomas</h3>
           <p>
             Donating to MerryMeal goes beyond charity; it's about nourishing
             communities. The joy of knowing that my contribution helps deliver

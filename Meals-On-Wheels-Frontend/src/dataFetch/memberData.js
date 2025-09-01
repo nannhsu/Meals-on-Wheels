@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export const memberData = (data) => {
   console.log("this is from Fetch data", data);
 
-  fetch("http://localhost:8080/user-api/member/register", {
+  fetch("http://localhost:8081/user-api/member/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -18,22 +18,19 @@ const Home = () => {
           <div className="left intro">
             <div className="text">
               <h1>
-                Delivering <span>Nourishment</span>, Bringing
-                <span>smiles</span>
+                Sharing <span>Meal</span>, Sharing <span>Joy</span>
               </h1>
               <p>
-                Welcome to Meals On Wheels, where compassion meets cuisine. We
-                are a dedicated team committed to delivering hot, nutritious
-                meals to qualified adults in need. Our mission is simple —
-                ensuring that no one goes hungry. Whether it's due to age,
-                illness, or disability, we're here to provide a helping hand.
+                Welcome to Meals On Wheels — where kindness meets good food. We
+                deliver hot, healthy meals to adults who need support. Our goal
+                is simple: no one should go hungry due to age, illness, or disability.
               </p>
             </div>
             <div className="btn-con flex">
-              <NavLink to="/register" className="flex btn primary ">
+              <NavLink to="/register" className="flex btn primary">
                 Get Meal <img src={GetMealIcon} alt="get meal icon" />
               </NavLink>
-              <NavLink to="/donate" className="flex btn secondary ">
+              <NavLink to="/donate" className="flex btn secondary">
                 Donate <img src={DonateIcon} alt="donate icon" />
               </NavLink>
             </div>
@@ -43,29 +40,31 @@ const Home = () => {
             <img
               className="second-img"
               src={HomeBanner2}
-              alt="Home Image Woman"
+              alt="Woman receiving meal"
             />
           </div>
         </section>
+
         <div className="status">
           <div>
-            <h3>$20M+</h3>
-            <p>Money Donated</p>
+            <h3>$15M+</h3>
+            <p>Funds Donated</p>
           </div>
           <div>
-            <h3>👨‍🦳4583+</h3>
-            <p>Donation Received</p>
+            <h3>4,583+</h3>
+            <p>Received Donations</p>
           </div>
           <div>
-            <h3>😇1032+</h3>
-            <p>Successful Campaign</p>
+            <h3>1,032+</h3>
+            <p>Campaigns Success</p>
           </div>
           <div>
-            <h3>❣38146+</h3>
+            <h3>38,146+</h3>
             <p>Volunteers</p>
           </div>
         </div>
       </div>
+
       <About />
       <MealService />
       <Testimonial />

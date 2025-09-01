@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import MapComponent from "../../dataFetch/MapComponent";
 import "./register.css";
 import { useState } from "react";
 
 const RegisterMember = ({ onHandleRegister }) => {
   const navigate = useNavigate();
-  // State to manage form data
+
+  // Updated state to include difficulties and disease
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
     address: "",
+    difficulties: "",
+    disease: ""
   });
 
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -19,20 +21,17 @@ const RegisterMember = ({ onHandleRegister }) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    // Reset the passwordsMatch state when any input changes
     setPasswordsMatch(true);
   };
 
   const handleConfirmPasswordChange = (e) => {
     setConfirmPassword(e.target.value);
-    // Check if passwords match and update the passwordsMatch state
     setPasswordsMatch(formData.password === e.target.value);
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Simple client-side validation to check if password and confirmation match
     if (!passwordsMatch) {
       alert("Password and Confirm Password do not match!");
       return;
@@ -40,6 +39,7 @@ const RegisterMember = ({ onHandleRegister }) => {
 
     console.log("Form data submitted:", formData);
     onHandleRegister(formData);
+
     alert("Register successful, Please Login with your credentials!");
     navigate("/login");
   };
@@ -50,13 +50,13 @@ const RegisterMember = ({ onHandleRegister }) => {
         Register For <span className="text-violet">Member</span>
       </h3>
       <h5>
-        This form if for Memeber 👉to getting supportation of Meal daily 👈 !
+        This form is for Member 👉 to get support for meals daily 👈!
       </h5>
       <form onSubmit={handleFormSubmit}>
         <input
           type="text"
           name="username"
-          value={formData.name}
+          value={formData.username}
           onChange={handleInputChange}
           placeholder="Enter your name.."
           required
@@ -70,7 +70,7 @@ const RegisterMember = ({ onHandleRegister }) => {
           required
         />
         <input
-          type="pre-password"
+          type="password"
           name="password"
           value={formData.password}
           onChange={handleInputChange}
@@ -88,7 +88,6 @@ const RegisterMember = ({ onHandleRegister }) => {
           required
         />
         <textarea
-          type="textarea"
           name="address"
           value={formData.address}
           onChange={handleInputChange}
@@ -96,18 +95,22 @@ const RegisterMember = ({ onHandleRegister }) => {
           required
         />
         <textarea
-          type="textarea"
           name="difficulties"
+          value={formData.difficulties}
+          onChange={handleInputChange}
           placeholder="About Difficulties..."
           required
         />
         <textarea
-          type="textarea"
           name="disease"
+          value={formData.disease}
+          onChange={handleInputChange}
           placeholder="About Diseases Information..."
           required
         />
-        <button className="btn secondary form-btn">Submit</button>
+        <button className="btn secondary form-btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

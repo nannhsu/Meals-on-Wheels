@@ -1,4 +1,4 @@
-/*  Inter Font */
+/* Inter Font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 :root {
@@ -8,25 +8,20 @@
   --secondary-color: #4caf50;
   --third-color: #ffa500;
 
-  /* Btn colors */
-  --btn-primary-color: #007bff;
-  --btn-secondary-color: #8a2be2;
+  /* Button colors */
+  --btn-primary-color: #8a2be2; /* pastel blue */
+  --btn-secondary-color: #8a2be2; /* pastel purple */
 
   /* Text colors */
-  --text-primary-color: #333333;
-  --text-secondary-color: #555555;
+  --text-primary-color: #000000; /* soft dark gray */
+  --text-secondary-color: #2f2f2f; /* soft gray */
   --white-color: #ffffff;
 
-  /* Font size */
-  /* 24.00px → 38.00px */
+  /* Font sizes */
   --title-1: clamp(1.5rem, 1.1957rem + 1.5217vw, 2.375rem);
-  /* 20.00px → 32.00px */
   --title-2: clamp(1.25rem, 0.9891rem + 1.3043vw, 2rem);
-  /* 18.00px → 28.00px */
   --title-3: clamp(1.125rem, 0.9076rem + 1.087vw, 1.75rem);
-  /* 16.00px → 20.00px */
   --normal-font: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
-  /* 14.00px → 18.00px */
   --para-font: clamp(0.875rem, 0.788rem + 0.4348vw, 1.125rem);
 }
 
@@ -51,12 +46,11 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--bg-color);
   color: var(--text-primary-color);
 }
 
-/* ====================
-    Container
-    =================== */
+/* Container */
 .container {
   width: min(85%, 1400px);
   margin: 0 auto;
@@ -88,9 +82,7 @@ img {
   width: 30px;
 }
 
-/* ================
-    Font 
-    =============== */
+/* Fonts */
 h1 {
   font-size: var(--title-1);
   font-weight: 900;
@@ -103,6 +95,7 @@ h2 {
   font-weight: 700;
   line-height: 150%;
 }
+
 h3 {
   font-size: var(--title-3);
   font-weight: 600;
@@ -142,9 +135,7 @@ p,
   color: var(--btn-secondary-color);
 }
 
-/* ================
-    Button 
-    =============== */
+/* Buttons */
 .btn {
   padding: 10px 20px;
   border: 1px solid;
@@ -162,9 +153,7 @@ p,
   gap: 15px;
 }
 
-/* ==========================
-    Input Styling
-    ======================= */
+/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -192,7 +181,7 @@ form .form-btn {
   padding: 15px 4rem;
 }
 
-/* Orange Button */
+/* Primary Button */
 .primary,
 .outline:hover {
   border-color: var(--primary-color);
@@ -201,7 +190,7 @@ form .form-btn {
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .outline {
@@ -228,7 +217,7 @@ form .form-btn {
   color: var(--white-color);
 }
 
-/* Violet button */
+/* Secondary/Violet Button */
 .secondary {
   border-color: var(--btn-secondary-color);
   background-color: var(--btn-secondary-color);
@@ -238,13 +227,10 @@ form .form-btn {
 .secondary-outline {
   border-color: var(--btn-secondary-color);
   background-color: transparent;
-  color: var(--white-color);
+  color: var(--btn-secondary-color);
 }
 
-/* ========================
-    Loading
-    ======================= */
-
+/* Loading */
 .loading {
   display: flex;
   justify-content: center;
@@ -259,6 +245,7 @@ form .form-btn {
   width: 80px;
   height: 80px;
 }
+
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
@@ -268,22 +255,27 @@ form .form-btn {
   background: var(--primary-color);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
   animation: lds-ellipsis1 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(4) {
   left: 56px;
   animation: lds-ellipsis3 0.6s infinite;
 }
+
 @keyframes lds-ellipsis1 {
   0% {
     transform: scale(0);
@@ -292,6 +284,7 @@ form .form-btn {
     transform: scale(1);
   }
 }
+
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
@@ -300,6 +293,7 @@ form .form-btn {
     transform: scale(0);
   }
 }
+
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);

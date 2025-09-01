@@ -1,11 +1,11 @@
 .footer-con {
-  background-color: rgba(255, 99, 71, 80%);
+  background-color: #a0c4ff;
   padding: 8rem 0;
 }
 
 .footer-con a,
 .footer-con .quick-form p {
-  color: var(--white-color);
+  color: #000000;
 }
 
 .footer-con .logo {
